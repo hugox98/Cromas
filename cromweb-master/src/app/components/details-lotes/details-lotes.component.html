@@ -1,0 +1,59 @@
+<h1>
+    Detalles del lote</h1>
+<br>
+<div class="row mb-2">
+    <div class="col-md-9">
+        <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+            <div class="col p-4 d-flex flex-column position-static">
+                <div class="row">
+                    <div class="col">
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Id</th>
+                                    <th>loc_gps</th>
+                                    <th>Profundidad</th>
+                                    <th>Fecha</th>
+                                    <th>Asnm</th>
+                                    <th>Clima</th>
+                                    <th>Uso suelo</th>
+                                    <th>Tipo Suelo</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let lote of loteinfo; index as i">
+                                    <td>{{ i+1 }} </td>
+                                    <td>{{ lote.id_lote }} </td>
+                                    <td>{{ lote.loc_gps }} </td>
+                                    <td>{{ lote.profundidad }} </td>
+                                    <td>{{ lote.fecha }} </td>
+                                    <td>{{ lote.asnm }} </td>
+                                    <td>{{ lote.clima }}</td>
+                                    <td>{{ lote.uso_suelo}}</td>
+                                    <td>{{ lote.tipo_suelo}}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+            <div class="col p-4 d-flex flex-column position-static">
+                <div class="col-auto d-none d-lg-block">
+                    <div class="one_third lastcolumn">
+                        <h3 class="heading">Cromas</h3>
+                        <div>
+                            <!--routerLink="../../muestra/1"-->
+                            <img src="assets/image/1.png" class="d-block w-100" routerLink="../../croma/1'">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

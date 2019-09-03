@@ -1,0 +1,31 @@
+<section id="login" class="mb-5">
+
+    <body>
+        <div class="containter">
+            <div class="row">
+  
+                <div class="col-xs-12 col-sm-6 col-md-4 mx-auto">
+                    <div class="card_login">
+                        <div class="card">
+                            <div class="card-body text-center">
+                                <form #formLogin="ngForm" (ngSubmit)="onLogin(formLogin)">
+                                    <h1 class="h3 mb-3 font-weight-normal">Iniciar Sesion</h1>
+                                    <div class="alert alert-danger" role="alert"  *ngIf= "isError" >
+                                        Usuario o contraseña incorrecta
+                                      </div>
+                                    <div class="form-group">
+                                        <input type="email" id="correo" name="correo" class="form-control" placeholder="Correo" [(ngModel)]="usuario.correo" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="password" id="password" name="password" class="form-control" placeholder="Contraseña" [(ngModel)]="usuario.contrasena" required>
+                                    </div>
+                                    <button type="submit" class="btn btn-success btn-block">Login</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</section>

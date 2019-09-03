@@ -1,0 +1,423 @@
+<h1>
+    Detalles del Croma</h1>
+<br>
+<div class="row mb-2">
+    <div class="col-md-6">
+        <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+            <div class="col p-4 d-flex flex-column position-static">
+                <div class="col-auto d-none d-lg-block">
+                    <div class="one_third lastcolumn">
+                        <img src="assets/image/1.jpg" class="d-block w-100">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+            <div class="col p-4 d-flex flex-column position-static">
+                <div class="col-auto d-none d-lg-block">
+                    <div class="one_third lastcolumn">
+                        <img src="assets/image/1.jpg" class="d-block w-100">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<h1>Formulario de Validación </h1>
+<!-- si no edita-->
+<div class="col-md-9">
+    <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+            <div *ngIf="!isEdit">
+                <form *ngFor="let croma of cromainfo; index as i">
+                    <div class="row">
+                        <div class="col">
+                            <p>ID de Muestra</p>
+                            <!-- <input type="text" class="form-control" placeholder="{{croma.id_muestra}}"> -->
+                            <select class="custom-select custom-select-lg mb-3" id="id_muestra" disabled>
+                                <option selected>{{croma.id_muestra}}</option>
+                                <option value="1" >Si</option>
+                                <option value="2">No</option>
+                              </select>
+                        </div>
+                        <div class="col">
+                            <p>Contenido de oxigeno</p>
+                            <!-- <input type="text" class="form-control" placeholder="{{croma.ind_oxg}}"> -->
+                            <div *ngIf="croma.ind_oxg === 1">
+                                <select class="custom-select custom-select-lg mb-3" id="ind_oxg" disabled>
+                                    <option selected>SI</option>
+                                    <option value="1" >Si</option>
+                                    <option value="2">No</option>
+                                  </select>
+                            </div>
+                            <div *ngIf="croma.ind_oxg === 0">
+                                <select class="custom-select custom-select-lg mb-3" id="ind_oxg" disabled>
+                                    <option selected>NO</option>
+                                    <option value="1" >Si</option>
+                                    <option value="2">No</option>
+                                  </select>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <p>Materia Organica y Humus</p>
+                            <!-- <input type="text" class="form-control" placeholder="{{croma.ind_mat_org}}"> -->
+                            <div *ngIf="croma.ind_mat_org === 1">
+                                <select class="custom-select custom-select-lg mb-3" id="ind_oxg" disabled>
+                                    <option selected>SI</option>
+                                    <option value="1" >Si</option>
+                                    <option value="2">No</option>
+                                  </select>
+                            </div>
+                            <div *ngIf="croma.ind_mat_org === 0">
+                                <select class="custom-select custom-select-lg mb-3" id="ind_oxg" disabled>
+                                    <option selected>NO</option>
+                                    <option value="1" >Si</option>
+                                    <option value="2">No</option>
+                                  </select>
+                            </div>
+                        </div>
+                    </div>
+                    <br><br>
+                    <div class="row">
+                        <div class="col">
+                            <p>Transformacion de sustancias</p>
+                            <!-- <input type="text" class="form-control" placeholder="{{croma.ind_trans_sust}}"> -->
+                            <div *ngIf="croma.ind_trans_sust === 1">
+                                <select class="custom-select custom-select-lg mb-3" id="ind_oxg" disabled>
+                                    <option selected>SI</option>
+                                    <option value="1" >Si</option>
+                                    <option value="2">No</option>
+                                  </select>
+                            </div>
+                            <div *ngIf="croma.ind_trans_sust === 0">
+                                <select class="custom-select custom-select-lg mb-3" id="ind_oxg" disabled>
+                                    <option selected>NO</option>
+                                    <option value="1" >Si</option>
+                                    <option value="2">No</option>
+                                  </select>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <p>Nitrogeno Enlazado</p>
+                            <!-- <input type="text" class="form-control" placeholder="{{croma.ind_n_elem}}"> -->
+                            <div *ngIf="croma.ind_n_elem === 1">
+                                <select class="custom-select custom-select-lg mb-3" id="ind_oxg" disabled>
+                                    <option selected>SI</option>
+                                    <option value="1" >Si</option>
+                                    <option value="2">No</option>
+                                  </select>
+                            </div>
+                            <div *ngIf="croma.ind_n_elem === 0">
+                                <select class="custom-select custom-select-lg mb-3" id="ind_oxg" disabled>
+                                    <option selected>NO</option>
+                                    <option value="1" >Si</option>
+                                    <option value="2">No</option>
+                                  </select>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <p>Rompimiento</p>
+                            <!-- <input type="text" class="form-control" placeholder="{{croma.ind_romp}}"> -->
+                            <div *ngIf="croma.ind_romp === 1">
+                                <select class="custom-select custom-select-lg mb-3" id="ind_oxg" disabled>
+                                    <option selected>SI</option>
+                                    <option value="1" >Si</option>
+                                    <option value="2">No</option>
+                                  </select>
+                            </div>
+                            <div *ngIf="croma.ind_romp === 0">
+                                <select class="custom-select custom-select-lg mb-3" id="ind_oxg" disabled>
+                                    <option selected>NO</option>
+                                    <option value="1" >Si</option>
+                                    <option value="2">No</option>
+                                  </select>
+                            </div>
+                        </div>
+                    </div>
+                    <br><br>
+                    <div class="row">
+                        <div class="col">
+                            <p>Materia viva</p>
+                            <!-- <input type="text" class="form-control" placeholder="{{croma.ind_mat_viva}}"> -->
+                            <div *ngIf="croma.ind_mat_viva === 1">
+                                <select class="custom-select custom-select-lg mb-3" id="ind_oxg" disabled>
+                                    <option selected>SI</option>
+                                    <option value="1" >Si</option>
+                                    <option value="2">No</option>
+                                  </select>
+                            </div>
+                            <div *ngIf="croma.ind_mat_viva === 0">
+                                <select class="custom-select custom-select-lg mb-3" id="ind_oxg" disabled>
+                                    <option selected>NO</option>
+                                    <option value="1" >Si</option>
+                                    <option value="2">No</option>
+                                  </select>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <p>Actividad Biologica</p>
+                            <!-- <input type="text" class="form-control" placeholder="{{croma.ind_bio}}"> -->
+                            <div *ngIf="croma.ind_bio === 1">
+                                <select class="custom-select custom-select-lg mb-3" id="ind_oxg" disabled>
+                                    <option selected>SI</option>
+                                    <option value="1" >Si</option>
+                                    <option value="2">No</option>
+                                  </select>
+                            </div>
+                            <div *ngIf="croma.ind_bio=== 0">
+                                <select class="custom-select custom-select-lg mb-3" id="ind_oxg" disabled>
+                                    <option selected>NO</option>
+                                    <option value="1" >Si</option>
+                                    <option value="2">No</option>
+                                  </select>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <p>Proteinas y nitrogeno organico</p>
+                            <!-- <input type="text" class="form-control" placeholder="{{croma.ind_pro_n}}"> -->
+                            <div *ngIf="croma.ind_pro_n === 1">
+                                <select class="custom-select custom-select-lg mb-3" id="ind_oxg" disabled>
+                                    <option selected>SI</option>
+                                    <option value="1" >Si</option>
+                                    <option value="2">No</option>
+                                  </select>
+                            </div>
+                            <div *ngIf="croma.ind_pro_n === 0">
+                                <select class="custom-select custom-select-lg mb-3" id="ind_oxg" disabled>
+                                    <option selected>NO</option>
+                                    <option value="1" >Si</option>
+                                    <option value="2">No</option>
+                                  </select>
+                            </div>
+                        </div>
+                    </div>
+                    <br><br>
+                    <div class="row">
+                        <div class="col">
+                            <p>Nombre del Croma</p>
+                            <input type="text" class="form-control" placeholder="{{croma.nom_img}}" disabled>
+
+                        </div>
+                    </div>
+                    <br>
+                    <p>*En caso de editar, al terminar presione guardar.</p>
+                    <button type="submit" class="btn btn-outline-success btn-lg" disabled>Guardar</button>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-- SI EDITA -->
+<div class="col-md-9">
+    <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+            <div *ngIf="isEdit">
+                <form *ngFor="let croma of cromainfo; index as i">
+                    <div class="row">
+                        <div class="col">
+                            <p>ID de Muestra</p>
+                            <!-- <input type="text" class="form-control" placeholder="{{croma.id_muestra}}"> -->
+                            <select class="custom-select custom-select-lg mb-3" id="id_muestra" disabled>
+                                <option selected>{{croma.id_muestra}}</option>
+                                <option value="1" >Si</option>
+                                <option value="2">No</option>
+                              </select>
+                        </div>
+                        <div class="col">
+                            <p>Contenido de oxigeno</p>
+                            <!-- <input type="text" class="form-control" placeholder="{{croma.ind_oxg}}"> -->
+                            <div *ngIf="croma.ind_oxg === 1">
+                                <select class="custom-select custom-select-lg mb-3" id="ind_oxg">
+                                    <option selected>SI</option>
+                                    <option value="1" >Si</option>
+                                    <option value="2">No</option>
+                                  </select>
+                            </div>
+                            <div *ngIf="croma.ind_oxg === 0">
+                                <select class="custom-select custom-select-lg mb-3" id="ind_oxg">
+                                    <option selected>NO</option>
+                                    <option value="1" >Si</option>
+                                    <option value="2">No</option>
+                                  </select>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <p>Materia Organica y Humus</p>
+                            <!-- <input type="text" class="form-control" placeholder="{{croma.ind_mat_org}}"> -->
+                            <div *ngIf="croma.ind_mat_org === 1">
+                                <select class="custom-select custom-select-lg mb-3" id="ind_oxg">
+                                    <option selected>SI</option>
+                                    <option value="1" >Si</option>
+                                    <option value="2">No</option>
+                                  </select>
+                            </div>
+                            <div *ngIf="croma.ind_mat_org === 0">
+                                <select class="custom-select custom-select-lg mb-3" id="ind_oxg">
+                                    <option selected>NO</option>
+                                    <option value="1" >Si</option>
+                                    <option value="2">No</option>
+                                  </select>
+                            </div>
+                        </div>
+                    </div>
+                    <br><br>
+                    <div class="row">
+                        <div class="col">
+                            <p>Transformacion de sustancias</p>
+                            <!-- <input type="text" class="form-control" placeholder="{{croma.ind_trans_sust}}"> -->
+                            <div *ngIf="croma.ind_trans_sust === 1">
+                                <select class="custom-select custom-select-lg mb-3" id="ind_oxg">
+                                    <option selected>SI</option>
+                                    <option value="1" >Si</option>
+                                    <option value="2">No</option>
+                                  </select>
+                            </div>
+                            <div *ngIf="croma.ind_trans_sust === 0">
+                                <select class="custom-select custom-select-lg mb-3" id="ind_oxg">
+                                    <option selected>NO</option>
+                                    <option value="1" >Si</option>
+                                    <option value="2">No</option>
+                                  </select>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <p>Nitrogeno Enlazado</p>
+                            <!-- <input type="text" class="form-control" placeholder="{{croma.ind_n_elem}}"> -->
+                            <div *ngIf="croma.ind_n_elem === 1">
+                                <select class="custom-select custom-select-lg mb-3" id="ind_oxg">
+                                    <option selected>SI</option>
+                                    <option value="1" >Si</option>
+                                    <option value="2">No</option>
+                                  </select>
+                            </div>
+                            <div *ngIf="croma.ind_n_elem === 0">
+                                <select class="custom-select custom-select-lg mb-3" id="ind_oxg">
+                                    <option selected>NO</option>
+                                    <option value="1" >Si</option>
+                                    <option value="2">No</option>
+                                  </select>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <p>Rompimiento</p>
+                            <!-- <input type="text" class="form-control" placeholder="{{croma.ind_romp}}"> -->
+                            <div *ngIf="croma.ind_romp === 1">
+                                <select class="custom-select custom-select-lg mb-3" id="ind_oxg">
+                                    <option selected>SI</option>
+                                    <option value="1" >Si</option>
+                                    <option value="2">No</option>
+                                  </select>
+                            </div>
+                            <div *ngIf="croma.ind_romp === 0">
+                                <select class="custom-select custom-select-lg mb-3" id="ind_oxg">
+                                    <option selected>NO</option>
+                                    <option value="1" >Si</option>
+                                    <option value="2">No</option>
+                                  </select>
+                            </div>
+                        </div>
+                    </div>
+                    <br><br>
+                    <div class="row">
+                        <div class="col">
+                            <p>Materia viva</p>
+                            <!-- <input type="text" class="form-control" placeholder="{{croma.ind_mat_viva}}"> -->
+                            <div *ngIf="croma.ind_mat_viva === 1">
+                                <select class="custom-select custom-select-lg mb-3" id="ind_oxg">
+                                    <option selected>SI</option>
+                                    <option value="1" >Si</option>
+                                    <option value="2">No</option>
+                                  </select>
+                            </div>
+                            <div *ngIf="croma.ind_mat_viva === 0">
+                                <select class="custom-select custom-select-lg mb-3" id="ind_oxg">
+                                    <option selected>NO</option>
+                                    <option value="1" >Si</option>
+                                    <option value="2">No</option>
+                                  </select>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <p>Actividad Biologica</p>
+                            <!-- <input type="text" class="form-control" placeholder="{{croma.ind_bio}}"> -->
+                            <div *ngIf="croma.ind_bio === 1">
+                                <select class="custom-select custom-select-lg mb-3" id="ind_oxg">
+                                    <option selected>SI</option>
+                                    <option value="1" >Si</option>
+                                    <option value="2">No</option>
+                                  </select>
+                            </div>
+                            <div *ngIf="croma.ind_bio=== 0">
+                                <select class="custom-select custom-select-lg mb-3" id="ind_oxg">
+                                    <option selected>NO</option>
+                                    <option value="1" >Si</option>
+                                    <option value="2">No</option>
+                                  </select>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <p>Proteinas y nitrogeno organico</p>
+                            <!-- <input type="text" class="form-control" placeholder="{{croma.ind_pro_n}}"> -->
+                            <div *ngIf="croma.ind_pro_n === 1">
+                                <select class="custom-select custom-select-lg mb-3" id="ind_oxg">
+                                    <option selected>SI</option>
+                                    <option value="1" >Si</option>
+                                    <option value="2">No</option>
+                                  </select>
+                            </div>
+                            <div *ngIf="croma.ind_pro_n === 0">
+                                <select class="custom-select custom-select-lg mb-3" id="ind_oxg">
+                                    <option selected>NO</option>
+                                    <option value="1" >Si</option>
+                                    <option value="2">No</option>
+                                  </select>
+                            </div>
+                        </div>
+                    </div>
+                    <br><br>
+                    <div class="row">
+                        <div class="col">
+                            <p>Nombre del Croma</p>
+                            <input type="text" class="form-control" placeholder="{{croma.nom_img}}">
+
+                        </div>
+                    </div>
+                    <br>
+                    <p>*En caso de editar, al terminar presione guardar.</p>
+                    <button type="submit" class="btn btn-outline-success btn-lg" (click)="save()">Guardar</button>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>
+<p>¿Los datos son correctos?</p>
+<p>*Si los datos proporcionados son correctos, presione validar.</p>
+<div class="row mb-2">
+    <div class="col-md-3">
+        <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+            <div class="col p-4 d-flex flex-column position-static">
+                <div class="col-auto d-none d-lg-block">
+                    <div class="one_third lastcolumn">
+                        <button type="button" class="btn btn-outline-success btn-lg">Si, validar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="row no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+            <div class="col p-4 d-flex flex-column position-static">
+                <div class="col-auto d-none d-lg-block">
+                    <div class="one_third lastcolumn">
+                        <button type="button" class="btn btn-outline-warning btn-lg " (click)="edit()">No,Editar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,71 @@
+<section id= "register" class="mb-5">
+    <body>
+    <div class="containter">
+        <div class="row">
+            <div class="col-xs-12 col-sm-6 col-md-4 mx-auto">
+                <div class="card_register">
+                    <div class="card">
+                        <div class="card-body text-center">
+                            <form #formRegister="ngForm" (ngSubmit)="onRegistro(formRegister)">
+                                <h1 class="h3 mb-3 font-weight-normal">Register</h1>
+                                <div class="form-group">
+                                    <input type="text" #name="ngModel" name="nombre" class="form-control" 
+                                    placeholder="Nombre" [(ngModel)]="usuario.nombre"  required minlength="4" maxlength="15">
+                                </div>
+                                <div class="alert alert-danger" role="alert"  *ngIf="name.touched && !name.valid" >
+                                       <div *ngIf="name.errors.required">Nombre vacio </div>
+                                       <div *ngIf="name.errors.minlength">Nombre muy corto, inserte mas de 4 palabras </div>
+                                      </div>
+                                <div class="form-group">
+                                        <input type="text" #ape_pat="ngModel" name="ape_pat" class="form-control" 
+                                        placeholder="Apellido Paterno" [(ngModel)]="usuario.ape_pat" required minlength="3">
+                                    </div>
+                                    <div class="alert alert-danger" role="alert"  *ngIf="ape_pat.touched && !ape_pat.valid" >
+                                            <div *ngIf="ape_pat.errors.required">Apellido vacio, es requerido </div>
+                                            <div *ngIf="ape_pat.errors.minlength">Apellido muy corto, inserte mas de 3 letras </div>
+                                           </div>
+                                    <div class="form-group">
+                                            <input type="text" #ape_mat="ngModel" name="ape_mat" class="form-control" 
+                                            placeholder="Apellido Materno" [(ngModel)]="usuario.ape_mat" required minlength="3">
+                                        </div>
+                                        <div class="alert alert-danger" role="alert"  *ngIf="ape_mat.touched && !ape_mat.valid" >
+                                                <div *ngIf="ape_mat.errors.required">Apellido materno vacio, es requerido </div>
+                                                <div *ngIf="ape_mat.errors.minlength">Apellido muy corto, inserte mas de 3 letras </div>
+                                               </div>
+                                <div class="form-group">
+                                        <input type="email" #correo="ngModel" name="correo" class="form-control" 
+                                        placeholder="Correo" [(ngModel)]="usuario.correo" required>
+                                    </div>
+                                    <div class="alert alert-danger" role="alert"  *ngIf="correo.touched && !correo.valid" >
+                                            <div *ngIf="correo.errors.required">Correo vacio, es requerido </div>
+                                            <div *ngIf="correo.errors.minlength">Correo muy corto, inserte mas letras </div>
+                                           </div>
+                                    <div class="form-group">
+                                            <input type="text" #rol="ngModel" name="rol" class="form-control" 
+                                            placeholder="rol" [(ngModel)]="usuario.rol" required>
+                                        </div>
+                                        <div class="alert alert-danger" role="alert"  *ngIf="rol.touched && !rol.valid" >
+                                                <div *ngIf="rol.errors.required">rol vacio, es requerido </div>
+                                               </div>
+                                    <div class="form-group">
+                                            <input type="password" #password="ngModel" name="password" class="form-control" 
+                                            placeholder="Contraseña"[(ngModel)]="usuario.contrasena" required
+                                            minlength="4" maxlength="12">
+                                        </div>
+                                        <div class="alert alert-danger" role="alert"  *ngIf="password.touched && !password.valid" >
+                                                <div *ngIf="password.errors.required">contraseña vacio, es requerido </div>
+                                                <div *ngIf="password.errors.minlength">contraseña muy corto, inserte mas letras </div>
+                                               </div>
+                                        <button type="submit" class="btn btn-lg primary btn-block">Registrarse</button>
+                                        <div class="form-group">
+                                            <a routerLink="/user/login/login" class="form-control login-user">¿Tienes cuenta?</a>
+                                        </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+      </body>
+    </section>
